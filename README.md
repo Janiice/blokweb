@@ -36,14 +36,14 @@ Surface plane
 <summary>uitwerken voor kick-off werkgroep</summary>
 
 ### Je opdracht:
-link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp
+<a> https://www.dunkin.nl/</a>
 
 #### Screenshot(s) van de eerste pagina (small screen): 
-hier de naam van de pagina  
+Dunkin'  
 <img src="images/DunkinHome.png" width="375px" alt="Dunkin donuts home page">
 
 #### Screenshot(s) van de tweede pagina (small screen):
-hier de naam van de pagina  
+Dunkin'
 <img src="images/DunkinBlog.png" width="375px" alt="Dunkin donuts blog page">
  
 </details>
