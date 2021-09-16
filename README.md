@@ -84,12 +84,17 @@ hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je we
 ### Agenda voor meeting
 samen met je groepje opstellen
 
-| student 1      | student 2          | student 3    | student 4        |
-| ---            | ---                | ---          | ---              |
-| dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-| en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-| ...            | ...                | ...          | ...              |
+Bas;
+-hoe je transitions in css nog spannender kan maken.
+-hoe je je code netjes houd
 
+Janice;
+-Hoe laat ik om de zoveel tijd een image bewegen?
+-Hoe laat ik iets (bijv. een tekst/a) in en uit zoomen als ik eroverheen hover of aanklik.
+
+Jesse;
+-Hoe organiseer ik mijn CSS het beste?
+-Waar leer ik meer over responsive design?
 
 ### Verslag van meeting
 hier na afloop snel de uitkomsten van de meeting vastleggen
