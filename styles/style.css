@@ -3,10 +3,69 @@
   box-sizing:border-box;  
 }
 
+@font-face {
+  font-family: 'Dunkin Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Dunkin Regular'), url('../assets/Dunkin.woff') format('woff');
+  }
+
+  h1 {
+    font-family: 'Dunkin Regular';
+    text-transform: uppercase;
+  }
+  
+  h2{
+    font-family: 'Dunkin Regular';
+    text-transform: uppercase;
+  }
+
+a {
+  background-color: #ff6e0c;
+  color:#ffffff;
+  font-family: 'Dunkin Regular';
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.80em 7.48em;
+  border-radius: 7.48em;
+}
+}
+
 section:nth-of-type(1) {
 
 }
-section:nth-of-type(1) a:nth-of-type(2){
+
+section:nth-of-type(2) {
+background-color: #ff6e0c;
+border-radius: 1em;
+}
+
+section:nth-of-type(3) {
+  background-color: #f20c90;
+  border-radius: 1em;
+  }
+
+  section:nth-of-type(4) {
+    background-color: #99d6ea;
+    border-radius: 1em;
+    }
+
+    section:nth-of-type(6) {
+      background-color: #71c5e8;
+      border-radius: 1em;
+      }
+  
+      section:nth-of-type(10) {
+        background-color: #f20c90;
+        border-radius: 1em;
+        }
+    
+  
+section:nth-of-type(3) a:nth-of-type(1){
+
+}
+
+section:nth-of-type(3) a:nth-of-type(2){
 
 }
 
