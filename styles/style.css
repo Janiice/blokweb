@@ -30,18 +30,20 @@
     color:var(--white);
     font-size: 3em;
     text-align: center;
+    line-height: 1em;
   }
  
   h2{
     font-family: 'Dunkin Regular';
     text-transform: uppercase;
-    text-align: center;
+    text-align: center; 
   }
 
   p {
     font-family: 'Dunkin Regular';
     color:var(--textColor);
     font-size: 0.7em;
+    padding: 2em;
   }
 
   ul {
@@ -66,10 +68,26 @@ a {
 /***Header***/
 /****************/
 header {
-padding: 1em;
-background-color: white;
+  padding: 1.4em;
+  background-color: white;
+  display: grid;
+  top: 0;
+  position: sticky;
 }
 
+header img {
+  height: 1.4em;
+  justify-self: center;
+}
+
+section img {
+  width: 100%;
+  border-radius: 1em;
+}
+
+section {
+  width: 100%;
+}
 
 /****************/
 /***Order now button section***/
@@ -130,6 +148,19 @@ section:nth-of-type(4) {
 /***Bestel dunkin' donuts online. stappen***/
 /****************/
 
+section:nth-of-type(5) h1{
+  text-align: left;
+  }
+
+
+span:nth-of-type(1), span:nth-of-type(3) {
+  color: var(--SecondColor);
+}
+
+span:nth-of-type(2), span:nth-of-type(4){
+  color: var(--mainColor);
+}
+
 section:nth-of-type(5) article{
   background-color: var(--white);
   color: var(--SecondColor);
@@ -143,10 +174,19 @@ section:nth-of-type(5) article{
  section:nth-of-type(6) {
   background-color: #71c5e8;
   border-radius: 1em;
+  text-align: center;
+  }
+
+  section:nth-of-type(6) h2{
+    color: var(--white);
   }
 
   section:nth-of-type(6) p{
     color: var(--white);
+  }
+
+  section:nth-of-type(6) img{
+    width: 50%;
   }
 
 /****************/
@@ -156,6 +196,11 @@ section:nth-of-type(5) article{
 section:nth-of-type(7) h1{
   color: var(--SecondColor);
 }
+
+section:nth-of-type(7) img{
+ border-radius: 1em;
+}
+
   
 
 /****************/
@@ -164,6 +209,8 @@ section:nth-of-type(7) h1{
 
 section:nth-of-type(8) h1{
   color: var(--mainColor);
+  text-align: left;
+  font-size: 2em;
 }
 
 /****************/
@@ -190,5 +237,37 @@ section:nth-of-type(9) {
 /***Footer***/
 /****************/
 
-  
+footer section:first-of-type {
+background-color: var(--mainColor);
+}
 
+footer section:first-of-type a{
+  background-color: #EE4C25;
+  padding: 2em ;
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 0.8em;
+  }
+
+  footer section:first-of-type ul {
+   display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 100%;
+  padding: 1em;
+    }
+
+footer section:last-of-type {
+background-color: var(--backgroundColor);
+padding: 1em;
+text-align: center;
+
+}
+
+footer section:last-of-type a{
+  background:none;
+color: #C7C7C7;
+font-size: 0.5em;
+padding:0%;
+}
