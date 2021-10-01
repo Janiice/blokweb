@@ -1,16 +1,21 @@
 /* CSS Document */
+
 *, *::after, *::before {
-  box-sizing:border-box;  
+  box-sizing: border-box;
 }
 
+/****************/
+
+/***Kleuren***/
+
+/****************/
+
 :root {
-  
-  --white:#ffffff;
-  
-  --mainColor:#ff6e0c;
-  --SecondColor:#f20c90;
-  --backgroundColor:#f5f5f5;
-  --textColor:#b4b4b4;
+  --white: #ffffff;
+  --mainColor: #ff6e0c;
+  --SecondColor: #f20c90;
+  --backgroundColor: #f5f5f5;
+  --textColor: #b4b4b4;
 }
 
 @font-face {
@@ -18,45 +23,79 @@
   font-style: normal;
   font-weight: normal;
   src: local('Dunkin Regular'), url('../assets/Dunkin.woff') format('woff');
-  }
+}
 
-  body {
-    background-color:var(--backgroundColor);
-  }
+body {
+  background-color: var(--backgroundColor);
+  margin: 0;
+}
 
-  h1 {
-    font-family: 'Dunkin Regular';
-    text-transform: uppercase;
-    color:var(--white);
-    font-size: 3em;
-    text-align: center;
-    line-height: 1em;
-  }
- 
-  h2{
-    font-family: 'Dunkin Regular';
-    text-transform: uppercase;
-    text-align: center; 
-  }
+/****************/
 
-  p {
-    font-family: 'Dunkin Regular';
-    color:var(--textColor);
-    font-size: 0.7em;
-    padding: 2em;
-  }
+/***Header***/
 
-  ul {
-    list-style-type: none;
-  }
+/****************/
 
-  /****************/
-  /***Oranje buttons***/
-  /****************/
+header {
+  padding: 1.4em;
+  background-color: white;
+  display: grid;
+  top: 0;
+  position: sticky;
+  z-index: 999;
+}
+
+header img {
+  height: 1.4em;
+  justify-self: center;
+}
+
+main {
+  display: grid;
+  gap: 1em;
+  padding: 0.6em;
+}
+
+/****************/
+
+/***Tekst***/
+
+/****************/
+
+h1 {
+  font-family: 'Dunkin Regular';
+  text-transform: uppercase;
+  color: var(--white);
+  font-size: 3em;
+  text-align: center;
+  line-height: 1em;
+}
+
+h2 {
+  font-family: 'Dunkin Regular';
+  text-transform: uppercase;
+  text-align: center;
+}
+
+p {
+  font-family: 'Dunkin Regular';
+  color: var(--textColor);
+  font-size: 0.7em;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/****************/
+
+/***Oranje buttons***/
+
+/****************/
 
 a {
   background-color: var(--mainColor);
-  color:var(--white);
+  color: var(--white);
   font-family: 'Dunkin Regular';
   text-transform: uppercase;
   text-decoration: none;
@@ -65,19 +104,14 @@ a {
 }
 
 /****************/
-/***Header***/
-/****************/
-header {
-  padding: 1.4em;
-  background-color: white;
-  display: grid;
-  top: 0;
-  position: sticky;
-}
 
-header img {
-  height: 1.4em;
-  justify-self: center;
+/***Section styling***/
+
+/****************/
+
+section {
+  /* width: 95%; */
+  position: relative;
 }
 
 section img {
@@ -85,189 +119,319 @@ section img {
   border-radius: 1em;
 }
 
-section {
-  width: 100%;
-}
-
 /****************/
+
 /***Order now button section***/
+
 /****************/
 
 section:nth-of-type(1) {
-
+  margin: 20px auto;
 }
 
 /****************/
+
 /***Dunkin' delivery***/
+
 /****************/
 
 section:nth-of-type(2) {
-background-color: var(--mainColor);
-border-radius: 1em;
+  background-color: var(--mainColor);
+  border-radius: 1em;
 }
 
 /****************/
+
 /***Bestel!***/
+
 /****************/
 
 section:nth-of-type(3) {
   background-color: var(--SecondColor);
   border-radius: 1em;
-  }
+  padding: 1em;
+}
 
-  section:nth-of-type(3) p{
-    color: var(--white);
-  }
+section:nth-of-type(3) p {
+  color: var(--white);
+}
+
+section:nth-of-type(3) section {
+  display: flex;
+  justify-content: space-evenly;
+  margin: .625em;
+}
 
 /****************/
+
 /***Buttons Bestel!***/
+
 /****************/
 
-  section:nth-of-type(3) a:nth-of-type(1){
-background-color: var(--white);
-color: var(--SecondColor);
-border-radius: 0.70em;
-  }
-  
-  section:nth-of-type(3) a:nth-of-type(2){
-    background-color: #f950ad;
-    color: var(--white);
-    border-radius: 0.70em;
-  }
-  
+section:nth-of-type(3) a:nth-of-type(1) {
+  background-color: var(--white);
+  color: var(--SecondColor);
+  border-radius: 0.70em;
+  padding: 1em 1.3em;
+}
+
+section:nth-of-type(3) a:nth-of-type(2) {
+  background-color: #f950ad;
+  color: var(--white);
+  border-radius: 0.70em;
+  padding: 1em 1.3em;
+}
+
 /****************/
+
 /***Dunkin' x Ajax***/
+
 /****************/
 
 section:nth-of-type(4) {
   background-color: #99d6ea;
   border-radius: 1em;
-  }
-  
+}
+
 /****************/
+
 /***Bestel dunkin' donuts online. stappen***/
+
 /****************/
 
-section:nth-of-type(5) h1{
-  text-align: left;
-  }
+section:nth-of-type(5) {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
 
+section:nth-of-type(5) h1 {
+  text-align: left;
+}
 
 span:nth-of-type(1), span:nth-of-type(3) {
   color: var(--SecondColor);
 }
 
-span:nth-of-type(2), span:nth-of-type(4){
+span:nth-of-type(2), span:nth-of-type(4) {
   color: var(--mainColor);
 }
 
-section:nth-of-type(5) article{
+section:nth-of-type(5) article {
+  display: flex;
+  align-items: center;
+  padding: .5em;
+  gap: 1em;
   background-color: var(--white);
   color: var(--SecondColor);
   border-radius: 1em;
 }
 
-/****************/
-/***App jij 'm all?, dunkin' app***/
+section:nth-of-type(5) article section {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+section:nth-of-type(5) article section h2 {
+  text-align: left;
+  margin-top: 0;
+  padding: 0;
+}
+
+section:nth-of-type(5) article img {
+  width: 4em;
+  height: 4em;
+  order: -1;
+}
+
+section:nth-of-type(5) a {
+  display: block;
+}
+
 /****************/
 
- section:nth-of-type(6) {
+/***App jij 'm all?, dunkin' app***/
+
+/****************/
+
+section:nth-of-type(6) {
   background-color: #71c5e8;
   border-radius: 1em;
   text-align: center;
-  }
+}
 
-  section:nth-of-type(6) h2{
-    color: var(--white);
-  }
+section:nth-of-type(6) h2 {
+  color: var(--white);
+}
 
-  section:nth-of-type(6) p{
-    color: var(--white);
-  }
+section:nth-of-type(6) p {
+  color: var(--white);
+}
 
-  section:nth-of-type(6) img{
-    width: 50%;
-  }
+section:nth-of-type(6) img {
+  width: 50%;
+}
 
 /****************/
+
 /***Dunkin' x Ajax***/
+
 /****************/
 
-section:nth-of-type(7) h1{
+section:nth-of-type(7) h1 {
   color: var(--SecondColor);
 }
 
-section:nth-of-type(7) img{
- border-radius: 1em;
+section:nth-of-type(7) img {
+  border-radius: 1em;
 }
 
-  
+section:nth-of-type(7) img:nth-of-type(2) {
+  position: absolute;
+  top: 18.3em;
+  left: 13em;
+  height: 7em;
+  width: 7em;
+}
+
+section:nth-of-type(7) p {
+  margin: 2em 0;
+}
 
 /****************/
+
 /***Nieuw: Dunkin'Cloud cakes***/
+
 /****************/
 
-section:nth-of-type(8) h1{
+section:nth-of-type(8) h1 {
   color: var(--mainColor);
   text-align: left;
   font-size: 2em;
 }
 
+section:nth-of-type(8) img:nth-of-type(2) {
+  position: absolute;
+  top: 18.3em;
+  left: 13em;
+  height: 7em;
+  width: 7em;
+}
+
+section:nth-of-type(8) p {
+  margin: 2em 0;
+}
+
 /****************/
-/***DD nieuws***/
+
+/***DD nieuws h1 + button***/
+
 /****************/
-  
+
 section:nth-of-type(9) {
-  background-color: var(--white);
   border-radius: 1em;
   border-color: var(--textColor);
-  }
+}
+
+section:nth-of-type(9) span:nth-of-type(1) {
+  color: var(--mainColor);
+}
+
+section:nth-of-type(9) span:nth-of-type(2) {
+  color: var(--SecondColor);
+}
 
 /****************/
+
+/***DD nieuws***/
+
+/****************/
+
+section:nth-of-type(10) {
+  background-color: var(--white);
+  border-radius: 1em;
+  border: 4px solid #C7C7C7;
+  padding: 1em;
+}
+
+section:nth-of-type(10) a {
+  padding: 0.5em 1.4em;
+  margin: 1.1em 0;
+  font-size: 0.8em;
+  display: block;
+  width: min-content;
+}
+
+section:nth-of-type(10) h2 {
+  color: #512D00;
+  font-size: 1.2em;
+}
+
+/****************/
+
 /***Store finder***/
+
 /****************/
 
- section:nth-of-type(10) {
+section:nth-of-type(11) {
   background-color: var(--SecondColor);
-   border-radius: 1em;
-     }
-    
+  border-radius: 1em;
+}
 
 /****************/
+
 /***Footer***/
+
 /****************/
 
 footer section:first-of-type {
-background-color: var(--mainColor);
+  background-color: var(--mainColor);
+  padding: 2em 0 0;
+  margin-top: 7em;
+  position: relative;
 }
 
-footer section:first-of-type a{
+footer section:first-of-type a {
   background-color: #EE4C25;
-  padding: 2em ;
+  padding: 2em;
   width: 100%;
   display: block;
   text-align: center;
   font-size: 0.8em;
-  }
+}
 
-  footer section:first-of-type ul {
-   display: flex;
+footer section:first-of-type ul {
+  display: flex;
   flex-direction: column;
   gap: 1em;
   width: 100%;
   padding: 1em;
-    }
+}
 
 footer section:last-of-type {
-background-color: var(--backgroundColor);
-padding: 1em;
-text-align: center;
-
+  background-color: var(--backgroundColor);
+  padding: 1em;
+  text-align: center;
 }
 
-footer section:last-of-type a{
-  background:none;
-color: #C7C7C7;
-font-size: 0.5em;
-padding:0%;
+footer section:last-of-type a {
+  background: none;
+  color: #C7C7C7;
+  font-size: 0.5em;
+  padding: 0%;
 }
+
+footer img {
+  border-radius: 50%;
+  width: 10em;
+  box-shadow: 1px 1px 10px grey;
+  position: absolute;
+  top: -6em;
+  left: 28%;
+}
+
+#blogs section:nth-of-type(1) {
+    background-color: var(--SecondColor);
+    border-radius: 1em;
+  }
