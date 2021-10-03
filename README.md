@@ -58,13 +58,10 @@ Dunkin'
 <summary>uitwerken na afloop 2e werkgroep</summary>
 
 ### de hele pagina: 
-<img src="images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+<img src="images/schetsdd" width="375px" alt="breakdown van de hele pagina">
 
 ### dynamisch deel (bijv menu): 
-<img src="images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
-
-### wellicht nog een dynamisch deel (bijv filter): 
-<img src="images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+<img src="images/menuschets" width="375px" alt="breakdown van een dynamisch deel">
 
 </details>
 
@@ -78,8 +75,7 @@ Dunkin'
 <summary>uitwerken voor 1e voortgang</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
+Ik had tijdens deze voortgang nog geen HTML geschreven.
 
 ### Agenda voor meeting
 samen met je groepje opstellen
@@ -99,10 +95,7 @@ Jesse;
 ### Verslag van meeting
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
-- punt 1
-- punt 2
-- nog een punt
-- ...
+Organisatie van css staat op dlo. Animaties van images is verder ook te vinden op dlo en is in codepen uitgewerkt. 
 
 </details>
 
@@ -116,26 +109,15 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 <summary>uitwerken voor 2e voortgang</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
+Html was volledig geschreven, standaard css toegepast.
 
 ### Agenda voor meeting
 samen met je groepje opstellen
 
-| student 1      | student 2          | student 3    | student 4        |
-| ---            | ---                | ---          | ---              |
-| dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-| en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-| ...            | ...                | ...          | ...              |
-
+-geen agenda samengesteld met groepje.
 
 ### Verslag van meeting
-hier na afloop snel de uitkomsten van de meeting vastleggen
 
-- punt 1
-- punt 2
-- nog een punt
-- ...
 
 </details>
 
@@ -151,29 +133,23 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 ### Bevindingen
 Lijst met je bevindingen die in de test naar voren kwamen:
 
-#### Titel eerste bevinding
-Hier korte omschrijving (met indien nodig een afbeelding)
+#### Screenreader
++ De screenreader las alle elementen voor van de pagina en het las de elementen ook op goede volgorde.
 
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
+#### Contrastbril 
+- De kleuren zijn lastig te zien dus het is lastig om te zien wat een button is of niet.
 
++ De elementen met een functie een bepaalde vorm te geven waardoor je het kan herkennen is misschien een oplossing.
 
-#### Titel tweede bevinding. 
-Hier korte omschrijving (met indien nodig een afbeelding)
++ wat meer consistentie hebben in elementen.
 
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
+#### Central vision weg 
++ Alles van de website is wel te zien en je kan makkelijk bewegen door de website heen.
 
+- De elementen zijn best dicht op elkaar, dus er kan wat meer ruimte tussen de elementen komen.
 
-#### Titel volgende bevinding. 
-Hier korte omschrijving (met indien nodig een afbeelding)
-
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
-
-
-#### Titel nog een bevinding. 
-Hier korte omschrijving (met indien nodig een afbeelding)
-
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
-
+#### Toetsenbord en muis 
++ De gebruiker kan overal doorheen met een toetsenbord en muis.
 </details>
 
 
@@ -186,26 +162,17 @@ Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbe
 <summary>uitwerken voor 3e voortgang</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
+Css van index.html af, blogs.html al geschreven maar niet volledig gestyled.
 
 ### Agenda voor meeting
 samen met je groepje opstellen
 
-| student 1      | student 2          | student 3    | student 4        |
-| ---            | ---                | ---          | ---              |
-| dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-| en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-| ...            | ...                | ...          | ...              |
-
+-geen agenda samengesteld met groepje.
 
 ### Verslag van meeting
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
-- punt 1
-- punt 2
-- nog een punt
-- ...
+
 
 </details>
 
@@ -219,11 +186,19 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 <summary>uitwerken voor eindgesprek</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
+De html schrijven met behulp van sections was makkelijk en fijn mee te werken. Tijdens het werken was het handig om gelijk titels te geven om alles overzichtelijk te houden. Css schrijven met behulp van nth-of-type was snel te begrijpen nadat ik het een keer gezien had. Ik heb soms wel moeite met het moeten kiezen tussen de manieren om dingen als images te bewegen. Javascript was geen grote uitdaging doordat deze niet veel uitwijkde van inleiding programmeren. 
 ### Screenshot(s)
 
-hier screenshot(s) van je eindresultaat
+<img src="images/screenshot1dunkin.png" width="375px" alt="screenshot1">
+<img src="images/screenshot2dunkin.png" width="375px" alt="screenshot2">
+<img src="images/screenshot3dunkin.png" width="375px" alt="screenshot3">
+<img src="images/screenshot4dunkin.png" width="375px" alt="screenshot4">
+<img src="images/screenshot6dunkin.png" width="375px" alt="screenshot5">
+<img src="images/screenshot7dunkin.png" width="375px" alt="screenshot6">
+
+<img src="images/screenshothtml.png" width="375px" alt="screenshot7">
+<img src="images/screenshothtml2.png" width="375px" alt="screenshot8">
+<img src="images/screenshotjava.png" width="375px" alt="screenshot9">
 
 </details>
 
@@ -236,10 +211,8 @@ hier screenshot(s) van je eindresultaat
 <details open>
 <summary>continu bijhouden terwijl je werkt</summary>
 
-Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 
-1. bron 1
-2. bron 2
-3. ...
+1. Dark mode https://lukelowrey.com/css-variable-theme-switcher/
+2. https://www.dunkin.nl/blog
 
 </details>
