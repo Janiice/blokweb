@@ -1,17 +1,5 @@
 // JavaScript Document
 
-// Menu
-
-var menuButton = document.querySelector("header a:nth-of-type(2)")
-var menu = document.querySelector("header nav:nth-of-type(2)")
-
-function menuOpen() {
-    menu.classList.toggle("open")
-}
-
-menuButton.addEventListener("click", menuOpen)
-
-
 //darkmode bron: https://lukelowrey.com/css-variable-theme-switcher/
 
 var toggle = document.getElementById("theme-toggle");
@@ -27,21 +15,50 @@ toggle.onclick = function () {
 
     if (currentTheme === "light") {
         targetTheme = "dark";
+        toggle.src = "images/lightmode.png";  //hier wordt de zon image gepakt
+    }
+
+    else { 
+        toggle.src = "images/darkmode.png";   //hier wordt de maan image gepakt
     }
 
     document.documentElement.setAttribute('data-theme', targetTheme)
     localStorage.setItem('theme', targetTheme);
 };
 
-//sound effect menu openen
+
+// Menu
 
 var menuButton = document.querySelector("header a:nth-of-type(2)")
+var menu = document.querySelector("header nav:nth-of-type(2)")
+
+//sound effect menu openen
 
 var sound2 = new Audio('assets/soundeffect.mp3');
 
-function playMusic() {
+function menuOpen() {
+    menu.classList.toggle("open")
     sound2.play();
 }
 
-menuButton.addEventListener("click", playMusic)
+menuButton.addEventListener("click", menuOpen)
 
+
+//loading screen
+
+
+var loading = document.querySelector(".loading")
+
+window.addEventListener('load', function(){
+
+
+
+  setTimeout(function(){
+
+       loading.classList.add("remove-loading");
+
+    }, 1100);
+
+    //aantal miliseconde dat er gewacht wordt om de opdracht (de loading screen) te voeren
+  
+})

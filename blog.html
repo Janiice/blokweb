@@ -10,6 +10,9 @@
 
 	<link href="styles/style.css" rel="stylesheet">
 	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
+
+	<!--bron voor werkende form: https://listjs.com/docs/-->
 </head>
 
 
@@ -33,17 +36,29 @@
 		</nav>
 	</header>
 
-	<main>
+	<main id="blog-list">
+
+		<!--Deze is er om de library (script in head) kan kijken waar er gesearched wordt-->
+
+
+		<!--Loading screen -->
+		<div class="loading">
+			<section class="donutload">
+				<img src="images/donutloading.png" alt="loadingdonut">
+			</section>
+		</div>
+
 		<!--DD blogs form  -->
 		<section>
 			<h1>DD blogs</h1>
 
 			<form>
 
-				<input type="text" placeholder="Search..." id="zoeken">
+				<input type="text" class="search" placeholder="Search..." id="zoeken">
+				<!--class"search" is nodig om de input te pakket om te zoeken op wat er ingevuld wordt-->
 
-				<select id="catogorieen">
-					<option value="catogorieën">Catogorieën</option>
+				<select id="categorieen">
+					<option value="categorieën">Categorieën</option>
 					<option value="nieuw">Nieuw</option>
 					<option value="vegan">Vegan</option>
 					<option value="winkels">Winkels</option>
@@ -61,37 +76,43 @@
 			</form>
 		</section>
 
-		<!--Vegan blog-->
+		<div class="list">
+			<!--zoekt in child naar catogorieen of name die wordt ingetypt bij search, wanneer deze gevonden is wordt de hele section gegeven-->
 
-		<section>
-			<img src="images/hartdonutblog.png" alt="hartdonut">
-			<a href="#">Vegan</a>
-			<h2>Oproep aan alle vegans out there: Donut worry, we got you covered!</h2>
-		</section>
+			<!--Vegan blog-->
 
-		<!--Nieuw blog-->
+			<section>
+				<h2 class="name">Oproep aan alle vegans out there: Donut worry, we got you covered!</h2>
+				<img src="images/hartdonutblog.png" alt="hartdonut">
+				<a class="categorieen" href="#">Vegan</a>
+			</section>
 
-		<section>
-			<img src="images/blogimage1.png" alt="cloudcakes">
-			<a href="#">Nieuw</a>
-			<h2>Dunkin'Cloud Cakes! Het is heerlijk luchtig, heeft 8 verschillende smaken en...</h2>
-		</section>
+			<!--Nieuw blog-->
 
-		<!--Winkels blog-->
+			<section>
+				<h2 class="name">Dunkin'Cloud Cakes! Het is heerlijk luchtig, heeft 8 verschillende smaken en...</h2>
+				<img src="images/blogimage1.png" alt="cloudcakes">
+				<a class="categorieen" href="#">Nieuw</a>
+			</section>
 
-		<section>
-			<img src="images/Blogimage2.png" alt="dunkinmascotte">
-			<a href="#">Winkels</a>
-			<h2>Vestiging Dunkin’ Donuts opent aan het Spui in Den Haag: Bel ons voor gratis donuts!</h2>
-		</section>
+			<!--Winkels blog-->
 
-		<!--Business blog-->
+			<section>
+				<h2 class="name">Vestiging Dunkin’ Donuts opent aan het Spui in Den Haag: Bel ons voor gratis donuts!
+				</h2>
+				<img src="images/Blogimage2.png" alt="dunkinmascotte">
+				<a class="categorieen" href="#">Winkels</a>
+			</section>
 
-		<section>
-			<img src="images/Dunkinajax3.png" alt="ddxajax">
-			<a href="#">Business</a>
-			<h2>AFC Ajax en Dunkin’ hebben een samenwerkings-...</h2>
-		</section>
+			<!--Business blog-->
+
+			<section>
+				<h2 class="name">AFC Ajax en Dunkin’ hebben een samenwerkings-...</h2>
+				<img src="images/Dunkinajax3.png" alt="ddxajax">
+				<a class="categorieen" href="#">Business</a>
+			</section>
+
+		</div>
 
 	</main>
 
@@ -124,5 +145,6 @@
 	</footer>
 
 	<script src="scripts/script.js"></script>
+	<script src="scripts/sort.js"></script>
 
 </body>

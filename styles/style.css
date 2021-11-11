@@ -10,7 +10,7 @@
 
 /****************/
 
-:root {
+:root, html[data-theme='light'] {
   --white: #ffffff;
   --mainColor: #ff6e0c;
   --SecondColor: #f20c90;
@@ -21,19 +21,8 @@
   --sectionBackground2: #71c5e8;
   --borderColor: #F0F0F0;
   --h2Color: #512D00;
-}
-
-html[data-theme='light'] {
-  --white: #ffffff;
-  --mainColor: #ff6e0c;
-  --SecondColor: #f20c90;
-  --backgroundColor: #f5f5f5;
-  --textColor: #b4b4b4;
-  --bestelButtonColor: #f950ad;
-  --sectionBackground1: #99d6ea;
-  --sectionBackground2: #71c5e8;
-  --borderColor: #F0F0F0;
-  --h2Color: #512D00;
+  --footerA: #EE4C25;
+  --footerA2: #C7C7C7;
 }
 
 html[data-theme='dark'] {
@@ -47,6 +36,8 @@ html[data-theme='dark'] {
   --sectionBackground2: #237B98;
   --borderColor: #818181;
   --h2Color: #b4b4b4;
+  --footerA: #d33a14;
+  --footerA2: #c7c7c7aa;
 }
 
 /****************/
@@ -100,6 +91,7 @@ header a:nth-of-type(1) {
   position: fixed;
   left: 1em;
   top: 1.2em;
+  width: min-content;
 }
 
 header a:nth-of-type(2) {
@@ -108,6 +100,7 @@ header a:nth-of-type(2) {
   position: fixed;
   right: 1.3em;
   top: 1.2em;
+  width: min-content;
 }
 
 nav img {
@@ -144,12 +137,17 @@ header nav:nth-of-type(2) a {
   overflow: hidden;
   position: inherit;
   font-size: 2em;
+  width: auto;
 }
+
+/** Width auto om te centeren**/
 
 header nav:nth-of-type(2).open {
   height: 100%;
   position: fixed;
 }
+
+/** position fixed anders niet in scherm **/
 
 /****************/
 
@@ -161,6 +159,66 @@ main {
   display: grid;
   gap: 1em;
   padding: 0.6em;
+}
+
+/****************/
+
+/***loading screen***/
+
+/****************/
+
+@keyframes donutload-animation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+section.donutload img {
+  animation-name: donutload-animation;
+  animation-duration: .5s;
+  animation-iteration-count: 3;
+  height: 8em;
+  width: 8em;
+  display: block;
+  margin: 17em auto;
+}
+
+/*display block om links en rechts te centeren met auto, 17em om van boven*/
+
+div.loading {
+  height: 100%;
+  width: 100%;
+  background-color: var(--white);
+  position: fixed;
+  z-index: 999;
+  transition: .6s;
+  top: 0;
+  left: 0;
+}
+
+/* omg help
+section.donutload {
+  background-color: var(--white);
+} 
+*/
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+div.remove-loading {
+  opacity: 0;
+  z-index: -99;
+  animation-name: fadeOut;
+  animation-duration: .6s;
 }
 
 /****************/
@@ -210,6 +268,20 @@ a {
   text-decoration: none;
   padding: 0.80em 7.48em;
   border-radius: 7.48em;
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+/**Width + display block voor 'responsive' op telefoons**/
+
+a:hover {
+  transform: scale(0.9);
+  background-color: var(--SecondColor);
+}
+
+a:active {
+  background-color: var(--footerA);
 }
 
 /****************/
@@ -235,7 +307,7 @@ section img {
 /****************/
 
 section:nth-of-type(1) {
-  margin: 20px auto;
+  margin: 1em auto;
 }
 
 /****************/
@@ -267,7 +339,6 @@ section:nth-of-type(3) p {
 
 section:nth-of-type(3) section {
   display: flex;
-  justify-content: space-evenly;
   margin: .625em;
 }
 
@@ -277,18 +348,22 @@ section:nth-of-type(3) section {
 
 /****************/
 
-section:nth-of-type(3) a:nth-of-type(1) {
+#home section:nth-of-type(3) a:nth-of-type(1) {
   background-color: var(--white);
   color: var(--SecondColor);
   border-radius: 0.70em;
-  padding: 1em 1.3em;
+  padding: 1em 1em;
+  margin: 0.2em;
 }
+
+/*#home doordat de a op de blogs pagina styling anders niet pakt*/
 
 section:nth-of-type(3) a:nth-of-type(2) {
   background-color: var(--bestelButtonColor);
   color: var(--white);
   border-radius: 0.70em;
-  padding: 1em 1.3em;
+  padding: 1em 1em;
+  margin: 0.2em;
 }
 
 /****************/
@@ -327,25 +402,21 @@ span:nth-of-type(2), span:nth-of-type(4) {
 }
 
 section:nth-of-type(5) article {
-  display: flex;
   align-items: center;
   padding: .5em;
   gap: 1em;
   background-color: var(--white);
   color: var(--SecondColor);
   border-radius: 1em;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
 }
 
-section:nth-of-type(5) article section {
-  display: flex;
-  flex-direction: column;
-  align-items: baseline;
-}
+/* hoeveel fr's er staan beslist hoeveel columns, (2) en hoe groter het nummer, hoe groter het vakje is.*/
 
 section:nth-of-type(5) article section h2 {
   text-align: left;
   margin-top: 0;
-  padding: 0;
 }
 
 section:nth-of-type(5) article img {
@@ -355,9 +426,7 @@ section:nth-of-type(5) article img {
   border-radius: 50%;
 }
 
-section:nth-of-type(5) a {
-  display: block;
-}
+/*-1 order zodat de andere elementen niet gestyled hoeven te worden*/
 
 /****************/
 
@@ -389,17 +458,27 @@ section:nth-of-type(6) img {
 
 /****************/
 
+section:nth-of-type(7) {
+  display: flex;
+  flex-direction: column;
+}
+
+/*display flex + flex-direction column om de order te bepalen.*/
+
 section:nth-of-type(7) h1 {
   color: var(--SecondColor);
 }
 
 section:nth-of-type(7) img {
   border-radius: 1em;
+  order: -1;
 }
+
+/*-1 order zodat de andere elementen niet gestyled hoeven te worden*/
 
 section:nth-of-type(7) img:nth-of-type(2) {
   position: absolute;
-  top: 18.3em;
+  top: 17em;
   left: 13em;
   height: 7em;
   width: 7em;
@@ -414,6 +493,15 @@ section:nth-of-type(7) p {
 /***Nieuw: Dunkin'Cloud cakes***/
 
 /****************/
+
+section:nth-of-type(8) {
+  display: flex;
+  flex-direction: column;
+}
+
+section:nth-of-type(8) img {
+  order: -1;
+}
 
 section:nth-of-type(8) h1 {
   color: var(--mainColor);
@@ -463,6 +551,12 @@ section:nth-of-type(10) {
   border-radius: 1em;
   border: 4px solid var(--borderColor);
   padding: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+section:nth-of-type(10) img {
+  order: -1;
 }
 
 section:nth-of-type(10) a {
@@ -505,7 +599,7 @@ footer section:first-of-type, #blogs footer section:first-of-type {
 }
 
 footer section:first-of-type a, #blogs footer section:first-of-type a {
-  background-color: #EE4C25;
+  background-color: var(--footerA);
   padding: 2em;
   width: 100%;
   display: block;
@@ -529,10 +623,13 @@ footer section:last-of-type, #blogs footer section:last-of-type {
 
 footer section:last-of-type a, #blogs footer section:last-of-type a {
   background: none;
-  color: #C7C7C7;
+  color: var(--footerA2);
   font-size: 0.5em;
   padding: 0%;
+  display: contents;
 }
+
+/**display contents zodat de linkjes niet in een block zitten en niet centered staan zoals bij de a**/
 
 footer img {
   border-radius: 50%;
@@ -540,7 +637,7 @@ footer img {
   box-shadow: 1px 1px 10px var(--textColor);
   position: absolute;
   top: -6em;
-  left: 28%;
+  left: 31%;
 }
 
 /****************/
@@ -553,46 +650,48 @@ footer img {
   padding: 0;
 }
 
-#blogs section:nth-of-type(1) {
+#blogs main>section:nth-of-type(1) {
   background-color: var(--SecondColor);
   margin: 0;
   padding: 0;
 }
 
-#blogs section:nth-of-type(2), #blogs section:nth-of-type(3), #blogs section:nth-of-type(4), #blogs section:nth-of-type(5) {
+/* blogs > gedaan zodat de loading screen geen roze achtergrond heeft. zo geeft het alleen de achtergrond die de eerste section nth of type in blogs en niet dieper als in divs (die ook first nth of type is*/
+
+#blogs div section:nth-of-type(1), #blogs div section:nth-of-type(2), #blogs div section:nth-of-type(3), #blogs div section:nth-of-type(4) {
   background-color: var(--white);
   border-radius: 1em;
-  border: 4px solid var (--borderColor);
+  border: 4px solid var(--borderColor);
   padding: 1em;
+  display: flex;
+  flex-direction: column;
 }
 
-#blogs main section:nth-of-type(2) a, #blogs section:nth-of-type(4) a {
+#blogs div section:nth-of-type(1) a, #blogs div section:nth-of-type(3) a {
   padding: 0.5em 1.4em;
   margin: 1.1em 0;
   font-size: 0.8em;
   display: block;
   width: min-content;
+  order: 2;
 }
 
-#blogs section:nth-of-type(3) a, #blogs section:nth-of-type(5) a {
+#blogs div section:nth-of-type(2) a, #blogs div section:nth-of-type(4) a {
   background-color: var(--SecondColor);
-  color: var(--white);
-  font-family: 'Dunkin Regular';
-  text-transform: uppercase;
-  text-decoration: none;
   padding: 0.5em 1.4em;
-  border-radius: 7.48em;
   margin: 1.1em 0;
   font-size: 0.8em;
   display: block;
   width: min-content;
+  order: 2;
 }
 
-#blogs section:nth-of-type(2) h2, #blogs section:nth-of-type(3) h2, #blogs section:nth-of-type(4) h2, #blogs section:nth-of-type(5) h2 {
-  color: #512D00;
+#blogs div section:nth-of-type(1) h2, #blogs div section:nth-of-type(2) h2, #blogs div section:nth-of-type(3) h2, #blogs div section:nth-of-type(4) h2 {
+  color: var(--h2Color);
   font-size: 1.2em;
   line-height: 1.1em;
   text-align: left;
+  order: 3;
 }
 
 /****************/
@@ -621,7 +720,7 @@ form {
   color: var(--white);
 }
 
-#catogorieen, #datum {
+#categorieen, #datum {
   border: 4px solid var(--white);
   margin: 1.1em;
   font-size: 0.8em;
@@ -631,5 +730,14 @@ form {
   padding: 0.6em;
   font-family: 'Dunkin Regular';
   text-transform: uppercase;
-  color: var(--SecondColor);
+  color: var(--white);
+  background-color: var(--SecondColor);
+}
+
+iframe {
+  width: 100%;
+  height: 15em;
+  border: none;
+  display: block;
+  margin: auto auto 2em;
 }
